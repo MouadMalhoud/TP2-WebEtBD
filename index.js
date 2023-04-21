@@ -12,7 +12,7 @@ main().catch((err) => console.log(err));
 
 async function main() {
   await mongoose.connect(
-    "mongodb+srv://mouadmalhoud:Mondiali12$@tp2.0nynopl.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://mouadmalhoud:admo123@tp2.0nynopl.mongodb.net/?retryWrites=true&w=majority"
   );
 }
 
