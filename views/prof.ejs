@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= data[0].nom %>, <%= data[0].prenom %></title>
+</head>
+<body>
+    <h2>Changer l'info du prof</h2>
+    <form action="/profs/<%=data[0]._id%>" method="post">
+        <label for="prenom">Prenom:</label>
+        <input type="text" name="prenom" value="<%= data[0].prenom %>">
+        <br>
+        <label for="nom">Nom:</label>
+        <input type="text" name="nom" value="<%= data[0].nom %>">
+        <br>
+        <button>Appliquer les changement</button>
+    </form>
+    <h3>Les Cours du Prof</h3>
+    <ul>
+        <li><% cours.forEach(cour => { %>
+            <b><%= cour.idDuCours %></b>
+           <% }) %></li>
+           <br>
+    </ul>
+     <p>(pour changer le cours du prof va dans la section: cours)</p>
+    <a href="/profs">Go back</a>
+</body>
+</html>

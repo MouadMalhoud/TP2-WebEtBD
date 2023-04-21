@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Changer l'info du cours</h2>
+    <form action="/cours/<%=cours[0]._id%>" method="post">
+        <label for="nomDuCours">Nom du Cours:</label>
+        <input type="text" name="nomDuCours" value="<%= cours[0].nomDuCours  %>">
+        <br>
+        <label for="profs">Choisi le prof du cours:</label>
+        <select name="profs" id=""><% data.forEach(prof => { %>
+         <option value="<%= prof._id %>"><%= prof.nom %>, <%= prof.prenom %></option>
+        <% }) %></select>
+        <br>
+        <button>Appliquer les changement</button>
+    </form>
+    <a href="/cours">Go back</a>
+</body>
+</html>
